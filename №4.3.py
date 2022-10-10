@@ -17,11 +17,11 @@ def win_strg(stones):
         stones -= pl_turn
         print('Остатолось:', stones)
         if flag == 0:
-            answ = input('Вам не победить. Желаете убедиться? (Да/Нет) ')
+            answ = input('Вам не победить. Желаете продолжить? (Да/Нет) ')
             if answ.upper() == 'ДА':
                 flag = 1
             else:
-                return 'Вы проиграли'
+                return '\nВы проиграли'
         bot_turn = 4 - pl_turn
         stones -= bot_turn
         print('Ход бота:', bot_turn)
