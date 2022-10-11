@@ -1,7 +1,7 @@
 import re
 
 
-string = input()
+string = input('Введите строку: ')
 
 start = 0
 end = -1

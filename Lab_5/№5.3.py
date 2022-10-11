@@ -1,0 +1,5 @@
+base = input('Введите строку: ')
+elem = input('Введите подстроку: ')
+last_i = base.rfind(elem)
+new_str = base[:last_i].split(elem)
+print('Результат:', ''.join(new_str) + base[last_i:])
