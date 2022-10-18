@@ -1,17 +1,15 @@
-check_symbols = ['<', '>', '/', '\\', '''|''', '', '']
-formats = ['.txt', '.doc', '.docx', '.odt', '.rtf']
+check_symbols = ['<', '>', '/', '\\', '|', '', '']
+formats = ('.txt', '.doc', '.docx', '.odt', '.rtf')
 print("Вводите названия файлов: ")
 string = input()
 while string:
-    flag = 1
-    if string[-4:] in formats:
+    if string.endswith(formats):
         for sym in string:
             if sym in check_symbols:
-                print('Не может быть названием файла\n')
-                flag = 0
-                break
-        if flag:
-            print('Название подходит\n')
+                print('No')
+                string = input()
+                continue
+        print('Yes')
     else:
-        print('Не может быть названием файла\n')
+        print('No')
     string = input()

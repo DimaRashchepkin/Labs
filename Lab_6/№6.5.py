@@ -1,4 +1,4 @@
-lst = [3, -4, 5, 2, -3, 1, 3, -5, -1, 5]
+lst = [3, -4, 2, -3, 1, -5, -1, 5, 5]
 lst = sorted(lst)
 moda = 1
 modas = []
@@ -14,7 +14,9 @@ for i in range(1, len(lst)):
         tmp_elem = lst[i]
 modas.append(moda)
 
-if lst.count(lst.index(max(lst))) == 1:
+mx = max(lst)
+mx_id = lst.index(mx)
+if lst.count(modas[mx_id]) == 1:
     print('Мода:', max(lst))
 else:
     print('Мода не существует')
